@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签页组件</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<div id="app" v-cloak>
+    <tabs v-model="activeIndex">
+        <pane label="spring" closable="true">
+            春日光
+        </pane>
+        <pane label="summer">
+            夏狂热
+        </pane>
+        <pane label="autumn">
+            秋故事
+        </pane>
+    </tabs>
+</div>
+<script src="../vue.js"></script>
+<script src="./tabs.js"></script>
+<script src="./pane.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            activeIndex: 0
+        }
+    });
+</script>
+</body>
+</html>
+
